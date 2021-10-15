@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import '../../bin/tankerkoenig_api.dart';
+import 'package:tankerkoenig_api/tankerkoenig_api.dart';
 
 void main() {
   group('Tankerkoenig', () {
