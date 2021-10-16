@@ -19,7 +19,9 @@ class TankerkoenigListResponse {
     this.errorMessage,
   );
 
-  static TankerkoenigListResponse fromJson(Map<String, dynamic> json) {
+  static TankerkoenigListResponse fromJson(
+    Map<String, dynamic> json,
+  ) {
     return TankerkoenigListResponse(
       json["ok"],
       json["license"],
@@ -34,7 +36,9 @@ class TankerkoenigListResponse {
     );
   }
 
-  static TankerkoenigListResponse fromString(String string) {
+  static TankerkoenigListResponse fromString(
+    String string,
+  ) {
     return fromJson(
       jsonDecode(string),
     );

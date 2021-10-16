@@ -32,7 +32,9 @@ class TankerkoenigStation {
       this.houseNumer,
       this.postCode);
 
-  static TankerkoenigStation fromJson(Map<String, dynamic> json) {
+  static TankerkoenigStation fromJson(
+    Map<String, dynamic> json,
+  ) {
     return TankerkoenigStation(
       json["id"],
       json["name"],
@@ -51,8 +53,12 @@ class TankerkoenigStation {
     );
   }
 
-  static TankerkoenigStation fromString(String string) {
-    return fromJson(jsonDecode(string));
+  static TankerkoenigStation fromString(
+    String string,
+  ) {
+    return fromJson(
+      jsonDecode(string),
+    );
   }
 
   @override

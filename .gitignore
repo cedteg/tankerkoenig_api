@@ -4,5 +4,7 @@
 
 # Conventional directory for build output.
 build/
+doc/
 .flutter-plugins
 .flutter-plugins-dependencies
+.DS_Store
