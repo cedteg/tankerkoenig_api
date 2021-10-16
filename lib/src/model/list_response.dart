@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'station.dart';
 
+/// Tankerkoenig Response for the search by Radius
 class TankerkoenigListResponse {
   final bool ok;
   final String? errorMessage;
@@ -10,6 +11,7 @@ class TankerkoenigListResponse {
   final String? status;
   final List<TankerkoenigStation>? stations;
 
+  /// Tankerkoenig Response for the search by Radius
   TankerkoenigListResponse(
     this.ok,
     this.license,
@@ -19,6 +21,7 @@ class TankerkoenigListResponse {
     this.errorMessage,
   );
 
+  /// Transfrom a Json to a TankerkoenigListResponse Object
   static TankerkoenigListResponse fromJson(
     Map<String, dynamic> json,
   ) {
@@ -36,6 +39,7 @@ class TankerkoenigListResponse {
     );
   }
 
+  /// Transfrom a String to a TankerkoenigListResponse Object
   static TankerkoenigListResponse fromString(
     String string,
   ) {

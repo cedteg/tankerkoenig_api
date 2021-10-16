@@ -16,6 +16,7 @@ class TankerkoenigStation {
   final String houseNumer;
   final int postCode;
 
+  /// Petrol Station
   TankerkoenigStation(
       this.id,
       this.name,
@@ -32,6 +33,7 @@ class TankerkoenigStation {
       this.houseNumer,
       this.postCode);
 
+  /// Transfrom a Json to a TankerkoenigStation Object
   static TankerkoenigStation fromJson(
     Map<String, dynamic> json,
   ) {
@@ -53,6 +55,7 @@ class TankerkoenigStation {
     );
   }
 
+  /// Transfrom a String to a TankerkoenigStation Object
   static TankerkoenigStation fromString(
     String string,
   ) {

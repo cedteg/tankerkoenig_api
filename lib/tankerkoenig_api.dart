@@ -9,15 +9,19 @@ import 'src/model/list_response.dart';
 import 'src/model/list_response_error.dart';
 import 'package:http/http.dart' as http;
 
+/// Dart implementation for the Tankerkönig API
 class TankerkoenigApi {
   final String apikey;
 
+  /// Acces the german patrol station api Tankerkönig
+  ///
   /// The Apikey is required to authenticate against the tankerkienig api
   /// you can get an [apikey] via https://creativecommons.tankerkoenig.de/
   const TankerkoenigApi(
     this.apikey,
   );
 
+  /// internal function
   String _getRadiusHost() =>
       "https://creativecommons.tankerkoenig.de/json/list.php?apikey=$apikey&";
 
