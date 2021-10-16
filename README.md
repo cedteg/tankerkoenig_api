@@ -6,7 +6,7 @@ This package implement the tankerkoenig api. With this api you can get acces to 
 
 [![platform](https://img.shields.io/badge/Platform-Flutter-blue.svg)](https://flutter.dev/)
 [![platform](https://img.shields.io/badge/Platform-Dart-blue.svg)](https://dart.dev/)
-[![pub](https://img.shields.io/pub/v/tankerkoenig_api.svg)](https://pub.dev/packages/flutter_fb_news)
+[![pub](https://img.shields.io/pub/v/tankerkoenig_api.svg)](https://pub.dev/packages/tankerkoenig_api)
 [![donate](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffe-yellow.svg)](https://www.buymeacoffee.com/cedtegapps)
 
 ## Usage
