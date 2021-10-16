@@ -10,4 +10,10 @@ void main(List<String> arguments) async {
     sort: "dist",
   );
   print(response.stations?.length ?? "no stations");
+
+  TankerkoenigDetailResponse response2 =
+      await TankerkoenigApi("invalid").getStationDetail(
+    id: "id",
+  );
+  print(response2.station ?? "no stations");
 }

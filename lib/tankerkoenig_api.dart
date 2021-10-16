@@ -4,9 +4,13 @@ library tankerkoenig_api;
 export 'src/model/station.dart';
 export 'src/model/list_response.dart';
 export 'src/model/list_response_error.dart';
+export 'src/model/detail_response.dart';
+export 'src/model/detail_response_error.dart';
 
 import 'src/model/list_response.dart';
 import 'src/model/list_response_error.dart';
+import 'src/model/detail_response.dart';
+import 'src/model/detail_response_error.dart';
 import 'package:http/http.dart' as http;
 
 /// Dart implementation for the Tankerkönig API
@@ -25,7 +29,11 @@ class TankerkoenigApi {
   String _getRadiusHost() =>
       "https://creativecommons.tankerkoenig.de/json/list.php?apikey=$apikey&";
 
-  /// Get all German gas stations within the specify radius
+  /// internal function
+  String _getDetailHost() =>
+      "https://creativecommons.tankerkoenig.de/json/detail.php?apikey=$apikey&id=";
+
+  /// Get all German petrol stations within the specify radius
   ///
   /// [lat] & [lng] is required to specify the location to search in
   ///
@@ -71,6 +79,25 @@ class TankerkoenigApi {
       );
     }
     return TankerkoenigListResponseError(
+      "status code ${response.statusCode} - body :${response.body}",
+    );
+  }
+
+  /// Get detailed information for a signle German petrol station
+  Future<TankerkoenigDetailResponse> getStationDetail({
+    required String id,
+  }) async {
+    var response = await http.get(
+      Uri.parse(
+        _getDetailHost() + id,
+      ),
+    );
+    if (response.statusCode == 200) {
+      return TankerkoenigDetailResponse.fromString(
+        response.body,
+      );
+    }
+    return TankerkoenigDetailResponseError(
       "status code ${response.statusCode} - body :${response.body}",
     );
   }

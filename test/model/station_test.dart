@@ -35,6 +35,10 @@ void main() {
         true,
         "2",
         10407,
+        null,
+        null,
+        null,
+        null,
       );
       TankerkoenigStation fromJson = TankerkoenigStation.fromJson(json);
       expect(fromJson.id, equals(valid.id));
@@ -49,7 +53,7 @@ void main() {
       expect(fromJson.e5, equals(valid.e5));
       expect(fromJson.e10, equals(valid.e10));
       expect(fromJson.isOpen, equals(valid.isOpen));
-      expect(fromJson.houseNumer, equals(valid.houseNumer));
+      expect(fromJson.houseNumber, equals(valid.houseNumber));
       expect(fromJson.postCode, equals(valid.postCode));
     });
     test('from String', () {
@@ -70,6 +74,10 @@ void main() {
         true,
         "2",
         10407,
+        null,
+        null,
+        null,
+        null,
       );
       TankerkoenigStation fromJson = TankerkoenigStation.fromString(s);
       expect(fromJson.id, equals(valid.id));
@@ -84,7 +92,7 @@ void main() {
       expect(fromJson.e5, equals(valid.e5));
       expect(fromJson.e10, equals(valid.e10));
       expect(fromJson.isOpen, equals(valid.isOpen));
-      expect(fromJson.houseNumer, equals(valid.houseNumer));
+      expect(fromJson.houseNumber, equals(valid.houseNumber));
       expect(fromJson.postCode, equals(valid.postCode));
     });
   });
