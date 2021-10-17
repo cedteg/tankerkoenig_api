@@ -6,6 +6,7 @@ export 'src/model/list_response.dart';
 export 'src/model/list_response_error.dart';
 export 'src/model/detail_response.dart';
 export 'src/model/detail_response_error.dart';
+export 'src/model/opening_time.dart';
 
 import 'src/model/list_response.dart';
 import 'src/model/list_response_error.dart';
