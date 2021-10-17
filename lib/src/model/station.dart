@@ -93,16 +93,18 @@ class TankerkoenigStation {
       json["isOpen"],
       json["houseNumber"],
       json["postCode"],
-      json["openingTimes"]
+      (json["openingTimes"] ?? [])
           .map<OpeningTime>(
             (e) => OpeningTime.fromJson(
               e,
             ),
           )
           .toList(),
-      json["overrides"].map<String>(
-        (e) => e.toString(),
-      ),
+      (json["overrides"] ?? [])
+          ?.map<String>(
+            (e) => e.toString(),
+          )
+          .toList(),
       json["wholeDay"],
       json["state"],
     );
@@ -115,10 +117,5 @@ class TankerkoenigStation {
     return fromJson(
       jsonDecode(string),
     );
-  }
-
-  @override
-  String toString() {
-    return "TankerkoenigStation($id, $name, $brand, $street, $place, $lat, $lng, $dist, $diesel, $e5, $e10, $isOpen, $houseNumber, $place, ${openingTimes?.toString}, ${overrides?.toString()}, $wholeDay, $state)";
   }
 }
