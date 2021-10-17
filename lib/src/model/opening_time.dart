@@ -1,23 +1,23 @@
 import 'dart:convert';
 
 /// OpeningTime
-class OpeningTime {
+class TankerkoenigOpeningTime {
   final String text;
   final String start;
   final String end;
 
   /// OpeningTime
-  OpeningTime(
+  TankerkoenigOpeningTime(
     this.text,
     this.start,
     this.end,
   );
 
   /// Transfrom a Json to a TankerkoenigStation Object
-  static OpeningTime fromJson(
+  static TankerkoenigOpeningTime fromJson(
     Map<String, dynamic> json,
   ) {
-    return OpeningTime(
+    return TankerkoenigOpeningTime(
       json["text"],
       json["start"],
       json["end"],
@@ -25,7 +25,7 @@ class OpeningTime {
   }
 
   /// Transfrom a String to a TankerkoenigStation Object
-  static OpeningTime fromString(
+  static TankerkoenigOpeningTime fromString(
     String string,
   ) {
     return fromJson(

@@ -45,7 +45,7 @@ class TankerkoenigStation {
   final int postCode;
 
   /// Array with regular opening hours
-  final List<OpeningTime>? openingTimes;
+  final List<TankerkoenigOpeningTime>? openingTimes;
 
   /// Array with changed opening hours
   final List<String>? overrides;
@@ -94,8 +94,8 @@ class TankerkoenigStation {
       json["houseNumber"],
       json["postCode"],
       (json["openingTimes"] ?? [])
-          .map<OpeningTime>(
-            (e) => OpeningTime.fromJson(
+          .map<TankerkoenigOpeningTime>(
+            (e) => TankerkoenigOpeningTime.fromJson(
               e,
             ),
           )

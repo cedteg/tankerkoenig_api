@@ -41,9 +41,9 @@ void main() {
         "2",
         10407,
         [
-          OpeningTime("Mo-Fr", "06:00:00", "22:30:00"),
-          OpeningTime("Samstag", "07:00:00", "22:00:00"),
-          OpeningTime("Sonntag", "08:00:00", "22:00:00"),
+          TankerkoenigOpeningTime("Mo-Fr", "06:00:00", "22:30:00"),
+          TankerkoenigOpeningTime("Samstag", "07:00:00", "22:00:00"),
+          TankerkoenigOpeningTime("Sonntag", "08:00:00", "22:00:00"),
         ],
         null,
         null,
