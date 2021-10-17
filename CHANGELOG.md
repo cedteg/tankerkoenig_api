@@ -1,3 +1,5 @@
+## 1.0.0-dev.5
+- fix int is not a double issue
 ## 1.0.0-dev.4
 - Add Testcaes
 - rename OpeningTime to TankerkoenigOpeningTime 
