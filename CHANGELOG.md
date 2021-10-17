@@ -1,3 +1,6 @@
+## 1.0.0-dev.4
+- Add Testcaes
+- rename OpeningTime to TankerkoenigOpeningTime 
 ## 1.0.0-dev.3
 - Add stationdetail request
 ## 1.0.0-dev.2

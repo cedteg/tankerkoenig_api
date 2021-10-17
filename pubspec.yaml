@@ -1,6 +1,6 @@
 name: tankerkoenig_api
 description: This package implement a api with that you can get acces to the german patrol station information with diesel, e5 and e10. This plugin is not developed by tankerkönig!
-version: 1.0.0-dev.3
+version: 1.0.0-dev.4
 homepage: https://creativecommons.tankerkoenig.de/
 repository: https://github.com/cedteg/tankerkoenig_api
 issue_tracker: https://github.com/cedteg/tankerkoenig_api/issues

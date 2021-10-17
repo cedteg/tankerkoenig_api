@@ -15,5 +15,5 @@ void main(List<String> arguments) async {
       await TankerkoenigApi("invalid").getStationDetail(
     id: "id",
   );
-  print(response2.station ?? "no stations");
+  print(response2.station ?? "no station");
 }
