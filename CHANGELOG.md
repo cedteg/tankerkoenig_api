@@ -1,3 +1,6 @@
+## 2.0.0-dev.1
+## Breaking Changes
+- Migrate to tankerkoenig v4 API
 ## 1.0.0-dev.5
 - fix int is not a double issue
 ## 1.0.0-dev.4

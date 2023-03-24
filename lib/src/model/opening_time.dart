@@ -1,40 +1,65 @@
 import 'dart:convert';
 
-/// OpeningTime
-class TankerkoenigOpeningTime {
-  final String text;
-  final String start;
-  final String end;
+class TankerkoenigStationOpeningTime {
+  final List<String> days;
+  final List<TankerkoenigStationOpeningTimeOpenClose> times;
 
-  /// OpeningTime
-  TankerkoenigOpeningTime(
-    this.text,
-    this.start,
-    this.end,
+  TankerkoenigStationOpeningTime(
+    this.days,
+    this.times,
   );
 
-  /// Transfrom a Json to a TankerkoenigStation Object
-  static TankerkoenigOpeningTime fromJson(
+  static TankerkoenigStationOpeningTime fromJson(
     Map<String, dynamic> json,
   ) {
-    return TankerkoenigOpeningTime(
-      json["text"],
-      json["start"],
-      json["end"],
+    return TankerkoenigStationOpeningTime(
+      (json['days'] ?? [])
+          .map<String>(
+            (day) => day as String,
+          )
+          .toList(),
+      (json['times'] ?? [])
+          .map<TankerkoenigStationOpeningTimeOpenClose>(
+            (time) => TankerkoenigStationOpeningTimeOpenClose.fromJson(
+              time,
+            ),
+          )
+          .toList(),
     );
   }
 
-  /// Transfrom a String to a TankerkoenigStation Object
-  static TankerkoenigOpeningTime fromString(
+  static TankerkoenigStationOpeningTime fromString(
     String string,
   ) {
     return fromJson(
       jsonDecode(string),
     );
   }
+}
 
-  @override
-  String toString() {
-    return '{"text":"$text", "start":"$start", "end":"$end"}';
+class TankerkoenigStationOpeningTimeOpenClose {
+  final String open;
+  final String close;
+
+  TankerkoenigStationOpeningTimeOpenClose(
+    this.open,
+    this.close,
+  );
+
+  static TankerkoenigStationOpeningTimeOpenClose fromJson(
+    Map<String, dynamic> json,
+  ) {
+    return TankerkoenigStationOpeningTimeOpenClose(
+      json['open'],
+      json['close'],
+    );
+  }
+
+  static TankerkoenigStationOpeningTimeOpenClose fromString(
+    String string,
+  ) {
+    return fromJson(
+      jsonDecode(string),
+    );
   }
 }
