@@ -1,5 +1,9 @@
+## 2.0.0-dev.3
+- fix isOpen always false
+## 2.0.0-dev.2
+- add models and enum to export library
 ## 2.0.0-dev.1
-## Breaking Changes
+### Breaking Changes
 - Migrate to tankerkoenig v4 API
 ## 1.0.0-dev.5
 - fix int is not a double issue

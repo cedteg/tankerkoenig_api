@@ -1,7 +1,4 @@
 import 'package:latlong2/latlong.dart';
-import 'package:tankerkoenig_api/src/model/response_by_id.dart';
-import 'package:tankerkoenig_api/src/model/response_by_postalcode.dart';
-import 'package:tankerkoenig_api/src/model/response_by_radius.dart';
 import 'package:test/test.dart';
 import 'package:tankerkoenig_api/tankerkoenig_api.dart';
 

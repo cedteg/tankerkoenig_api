@@ -52,7 +52,7 @@ class TankerkoenigStation {
         json['coords']['lat'],
         json['coords']['lng'],
       ),
-      json['isOpen'] == "true",
+      json['isOpen'],
       DateTime.tryParse(json['closesAt'] ?? ""),
       json['dist'],
       (json['openingTimes'] ?? [])
