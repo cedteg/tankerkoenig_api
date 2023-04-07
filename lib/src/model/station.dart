@@ -7,8 +7,8 @@ import 'package:tankerkoenig_api/src/model/opening_time.dart';
 class TankerkoenigStation {
   final String country;
   final String id;
-  final String name;
-  final String brand;
+  final String? name;
+  final String? brand;
   final String street;
   final String postalCode;
   final String place;

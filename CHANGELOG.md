@@ -1,3 +1,5 @@
+## 2.0.0-dev.4
+- allow station name and brand to be null
 ## 2.0.0-dev.3
 - fix isOpen always false
 ## 2.0.0-dev.2
