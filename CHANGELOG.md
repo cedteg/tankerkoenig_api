@@ -1,3 +1,8 @@
+## 2.0.0
+- Release tankerkoenig_api 2.0.0
+- Support dependencies: 
+  - http ">=1.0.0 <2.0.0"
+   -  latlong2: ">=0.8.0 <1.0.0"
 ## 2.0.0-dev.4
 - allow station name and brand to be null
 ## 2.0.0-dev.3

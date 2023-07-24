@@ -20,7 +20,7 @@ class Complaint {
         await http.post(Uri.parse(_getStationsByRadiusUrl), body: {
       'apikey': apiKey,
       'id': id,
-      'type': type.name,
+      'type': type,
       'correction': correction,
     });
     return response.statusCode;
