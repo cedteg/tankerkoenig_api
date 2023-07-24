@@ -7,7 +7,7 @@ homepage: https://creativecommons.tankerkoenig.de/
 repository: https://github.com/cedteg/tankerkoenig_api
 issue_tracker: https://github.com/cedteg/tankerkoenig_api/issues
 environment:
-  sdk: ">=2.14.3 <3.0.0"
+  sdk: ">=2.14.3 <4.0.0"
 
 dev_dependencies:
   lints: ^1.0.0
